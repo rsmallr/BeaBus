@@ -48,7 +48,9 @@
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    self.licenseNumberButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0];
+    self.licenseNumberButton.selected = selected;
+    self.reserveBusButton.selected = selected;
+    self.licenseNumberButton.backgroundColor = (selected) ? [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0] : [UIColor clearColor];
 }
 
 @end
@@ -153,10 +155,7 @@
 
 - (IBAction)reserveBusButtonAction:(id)sender {
     NSInteger index = ((UIButton *)sender).tag;
-    BusStopCell *cell = (BusStopCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
-    cell.selected = YES;
-    cell.licenseNumberButton.selected = YES;
-    cell.reserveBusButton.selected = YES;
+    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredVertically];
 }
 
 #pragma mark - UICollectionView data source
@@ -190,6 +189,12 @@
     }
     else {
         cell.remainingTimeLabel.backgroundColor = [UIColor colorWithRed:153.0/255.0 green:102.0/255.0 blue:0/255.0 alpha:1];
+    }
+    
+    if ([[collectionView indexPathsForSelectedItems] containsObject:indexPath]) {
+        cell.selected = YES;
+    } else {
+        cell.selected = NO;
     }
     
     return cell;
