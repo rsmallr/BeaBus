@@ -28,6 +28,10 @@
     return YES;
 }
 
+- (IBAction)nextButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"goToRankingView" sender:self];
+}
+
 /*
 #pragma mark - Navigation
 
