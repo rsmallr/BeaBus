@@ -38,12 +38,18 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *remainingTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *busStopNameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *licenseNumberButton
-;
+@property (weak, nonatomic) IBOutlet UIButton *licenseNumberButton;
+@property (weak, nonatomic) IBOutlet UIButton *reserveBusButton;
 
 @end
 
 @implementation BusStopCell
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    self.licenseNumberButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0];
+}
 
 @end
 
@@ -51,6 +57,7 @@
 @interface BusLineViewController ()
 
 @property (strong, nonatomic) NSMutableArray *busStopInfos;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -84,6 +91,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)reserveBusButtonAction:(id)sender {
+    NSInteger index = ((UIButton *)sender).tag;
+    BusStopCell *cell = (BusStopCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    cell.selected = YES;
+    cell.licenseNumberButton.selected = YES;
+    cell.reserveBusButton.selected = YES;
+}
+
 #pragma mark - UICollectionView data source
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -101,8 +116,9 @@
     BusStopCell *cell = (BusStopCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BusStopCell" forIndexPath:indexPath];
     
     BusStopInfo *info = (indexPath.item%2) ? self.busStopInfos[0] : self.busStopInfos[1];
-    cell.licenseNumberButton.hidden = !(info.licenseNumber && info.licenseNumber.length > 0);
+    cell.licenseNumberButton.hidden = cell.reserveBusButton.hidden = !(info.licenseNumber && info.licenseNumber.length > 0);
     cell.licenseNumberButton.layer.borderColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0].CGColor;
+    cell.reserveBusButton.tag = indexPath.item;
     
     return cell;
 }

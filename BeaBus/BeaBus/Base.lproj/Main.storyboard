@@ -175,6 +175,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="vVn-BF-U17">
+                                <rect key="frame" x="16" y="58" width="288" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="往復興北村"/>
+                                    <segment title="往錦繡山莊"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GiK-sa-hg1">
                                 <rect key="frame" x="0.0" y="94" width="320" height="474"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,14 +227,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                                     <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EbN-Xh-j6N">
-                                                    <rect key="frame" x="140" y="42" width="162" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="預約此公車">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a0k-9h-edn">
                                                     <rect key="frame" x="258" y="9" width="54" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,6 +234,9 @@
                                                     <state key="normal" title="356-FM">
                                                         <color key="titleColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -243,6 +247,19 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EbN-Xh-j6N">
+                                                    <rect key="frame" x="148" y="31" width="153" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" backgroundImage="btn_ready_01.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="disabled" backgroundImage="btn_ready_03.png"/>
+                                                    <state key="selected" backgroundImage="btn_ready_02.png"/>
+                                                    <connections>
+                                                        <action selector="reserveBusButtonAction:" destination="FYT-ct-Tu2" eventType="touchUpInside" id="jXI-eD-I5Q"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -250,6 +267,7 @@
                                             <outlet property="busStopNameLabel" destination="xuM-ir-czb" id="ATK-to-JUk"/>
                                             <outlet property="licenseNumberButton" destination="a0k-9h-edn" id="jOb-eG-Vs8"/>
                                             <outlet property="remainingTimeLabel" destination="tMf-cU-veS" id="aeM-Cq-Brx"/>
+                                            <outlet property="reserveBusButton" destination="EbN-Xh-j6N" id="uH6-a9-tDW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -258,21 +276,13 @@
                                     <outlet property="delegate" destination="FYT-ct-Tu2" id="4Sv-H7-tL4"/>
                                 </connections>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="vVn-BF-U17">
-                                <rect key="frame" x="16" y="58" width="288" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="往復興北村"/>
-                                    <segment title="往錦繡山莊"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="VEA-hd-mub"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="GiK-sa-hg1" id="dmq-sa-dsm"/>
                         <segue destination="Esf-EI-YeH" kind="push" identifier="goToRankingView" id="N34-cN-xxX"/>
                     </connections>
                 </viewController>
@@ -332,6 +342,9 @@
     </scenes>
     <resources>
         <image name="01_search_img.png" width="640" height="580"/>
+        <image name="btn_ready_01.png" width="292" height="81"/>
+        <image name="btn_ready_02.png" width="292" height="81"/>
+        <image name="btn_ready_03.png" width="292" height="81"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
