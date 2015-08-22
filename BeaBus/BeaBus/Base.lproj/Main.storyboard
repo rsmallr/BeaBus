@@ -8,7 +8,7 @@
         <!--Bus Number View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Bus Number View Controller" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Bus Number View Controller" customClass="BusNumberViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
         <!--Bus Line View Controller-->
         <scene sceneID="Wdf-Wu-Cqo">
             <objects>
-                <viewController id="FYT-ct-Tu2" userLabel="Bus Line View Controller" sceneMemberID="viewController">
+                <viewController id="FYT-ct-Tu2" userLabel="Bus Line View Controller" customClass="BusLineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSj-eo-Hi4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Ranking View-->
         <scene sceneID="xpR-52-zSK">
             <objects>
-                <viewController id="Esf-EI-YeH" userLabel="Ranking View" sceneMemberID="viewController">
+                <viewController id="Esf-EI-YeH" userLabel="Ranking View" customClass="RankingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4v7-Pe-2IW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

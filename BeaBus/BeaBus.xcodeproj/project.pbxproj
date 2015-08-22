@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		965735481B88778200B2EAAD /* launcher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 965735471B88778200B2EAAD /* launcher.jpg */; };
+		9657354C1B88798300B2EAAD /* BusNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354B1B88798300B2EAAD /* BusNumberViewController.m */; };
+		9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354E1B8879B500B2EAAD /* BusLineViewController.m */; };
+		965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965735521B8879DE00B2EAAD /* RankingViewController.m */; };
 		B0A2D3F51B8870FF003195F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F41B8870FF003195F7 /* main.m */; };
 		B0A2D3F81B8870FF003195F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F71B8870FF003195F7 /* AppDelegate.m */; };
 		B0A2D3FB1B8870FF003195F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3FA1B8870FF003195F7 /* ViewController.m */; };
@@ -29,6 +32,12 @@
 
 /* Begin PBXFileReference section */
 		965735471B88778200B2EAAD /* launcher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = launcher.jpg; path = Resources/launcher.jpg; sourceTree = "<group>"; };
+		9657354A1B88798300B2EAAD /* BusNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusNumberViewController.h; sourceTree = "<group>"; };
+		9657354B1B88798300B2EAAD /* BusNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusNumberViewController.m; sourceTree = "<group>"; };
+		9657354D1B8879B500B2EAAD /* BusLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineViewController.h; sourceTree = "<group>"; };
+		9657354E1B8879B500B2EAAD /* BusLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineViewController.m; sourceTree = "<group>"; };
+		965735511B8879DE00B2EAAD /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		965735521B8879DE00B2EAAD /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		B0A2D3EF1B8870FF003195F7 /* BeaBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A2D3F31B8870FF003195F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A2D3F41B8870FF003195F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +79,19 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		965735491B88795500B2EAAD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9657354A1B88798300B2EAAD /* BusNumberViewController.h */,
+				9657354B1B88798300B2EAAD /* BusNumberViewController.m */,
+				9657354D1B8879B500B2EAAD /* BusLineViewController.h */,
+				9657354E1B8879B500B2EAAD /* BusLineViewController.m */,
+				965735511B8879DE00B2EAAD /* RankingViewController.h */,
+				965735521B8879DE00B2EAAD /* RankingViewController.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		B0A2D3E61B8870FF003195F7 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +113,7 @@
 		B0A2D3F11B8870FF003195F7 /* BeaBus */ = {
 			isa = PBXGroup;
 			children = (
+				965735491B88795500B2EAAD /* Source */,
 				965735461B88776B00B2EAAD /* Resource */,
 				B0A2D3F61B8870FF003195F7 /* AppDelegate.h */,
 				B0A2D3F71B8870FF003195F7 /* AppDelegate.m */,
@@ -233,7 +256,10 @@
 			files = (
 				B0A2D3FB1B8870FF003195F7 /* ViewController.m in Sources */,
 				B0A2D3F81B8870FF003195F7 /* AppDelegate.m in Sources */,
+				9657354C1B88798300B2EAAD /* BusNumberViewController.m in Sources */,
 				B0A2D3F51B8870FF003195F7 /* main.m in Sources */,
+				9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */,
+				965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
