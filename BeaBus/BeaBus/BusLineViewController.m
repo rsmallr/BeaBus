@@ -64,6 +64,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *reserveBusDriverNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reserveBusLicenseNumberLabel;
 
+@property (nonatomic) BOOL reserved;
+
 @end
 
 @implementation BusLineViewController
@@ -152,7 +154,19 @@
 #pragma mark - Action
 
 - (IBAction)nextButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"goToRankingView" sender:self];
+    if (!self.reserved) {
+        NSArray *selectedIndexPaths = [self.collectionView indexPathsForSelectedItems];
+        if (selectedIndexPaths.count > 0) {
+            for (NSIndexPath *path in selectedIndexPaths) {
+                BusStopCell *cell = (BusStopCell *)[self.collectionView cellForItemAtIndexPath:path];
+                [cell.reserveBusButton setBackgroundImage:[UIImage imageNamed:@"btn_ready_03.png"] forState:UIControlStateSelected];
+            }
+            
+            self.reserved = YES;
+        }
+    } else {
+        [self performSegueWithIdentifier:@"goToRankingView" sender:self];
+    }
 }
 
 - (IBAction)backButtonAction:(id)sender {
