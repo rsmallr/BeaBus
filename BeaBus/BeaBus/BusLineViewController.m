@@ -182,6 +182,15 @@
     cell.busStopNameLabel.text = info.busStopName;
     cell.remainingTimeLabel.text = info.remainingTime;
     cell.reserveBusButton.tag = indexPath.item;
+    if ([info.remainingTime isEqualToString:@"進站中"]) {
+        cell.remainingTimeLabel.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:40.0/255.0 blue:40/255.0 alpha:1];
+    }
+    else if ([info.remainingTime isEqualToString:@"將到站"]||[info.remainingTime isEqualToString:@"4分"]) {
+        cell.remainingTimeLabel.backgroundColor = [UIColor colorWithRed:40.0/255.0 green:140.0/255.0 blue:0/255.0 alpha:1];
+    }
+    else {
+        cell.remainingTimeLabel.backgroundColor = [UIColor colorWithRed:153.0/255.0 green:102.0/255.0 blue:0/255.0 alpha:1];
+    }
     
     return cell;
 }
