@@ -10,6 +10,8 @@
 
 @interface RankingViewController ()
 
+@property (nonatomic) IBOutlet UIView *likeImageView;
+
 @end
 
 @implementation RankingViewController
@@ -22,6 +24,33 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onClickLike:(id)sender
+{
+    [self showLikeViewIn:0.8];
+}
+
+- (void)showLikeViewIn:(CGFloat)second
+{
+    self.likeImageView.center = self.view.center;
+    [self.view addSubview:self.likeImageView];
+    [NSTimer scheduledTimerWithTimeInterval:second target:self selector:@selector(timeOut:) userInfo:nil repeats:NO];
+    
+}
+
+- (void)timeOut:(NSTimer *)timer
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.likeImageView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.likeImageView removeFromSuperview];
+        self.likeImageView.alpha = 1;
+    }];
 }
 
 -(BOOL)prefersStatusBarHidden{
