@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A56CBB21B88ED4D0087C3C5 /* BusDriverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */; };
 		9657354C1B88798300B2EAAD /* BusNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354B1B88798300B2EAAD /* BusNumberViewController.m */; };
 		9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354E1B8879B500B2EAAD /* BusLineViewController.m */; };
 		965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965735521B8879DE00B2EAAD /* RankingViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A56CBB01B88ED4D0087C3C5 /* BusDriverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDriverViewController.h; sourceTree = "<group>"; };
+		5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDriverViewController.m; sourceTree = "<group>"; };
 		9657354A1B88798300B2EAAD /* BusNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusNumberViewController.h; sourceTree = "<group>"; };
 		9657354B1B88798300B2EAAD /* BusNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusNumberViewController.m; sourceTree = "<group>"; };
 		9657354D1B8879B500B2EAAD /* BusLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineViewController.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				9657354E1B8879B500B2EAAD /* BusLineViewController.m */,
 				965735511B8879DE00B2EAAD /* RankingViewController.h */,
 				965735521B8879DE00B2EAAD /* RankingViewController.m */,
+				5A56CBB01B88ED4D0087C3C5 /* BusDriverViewController.h */,
+				5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				B0A2D3F51B8870FF003195F7 /* main.m in Sources */,
 				9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */,
 				965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */,
+				5A56CBB21B88ED4D0087C3C5 /* BusDriverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
