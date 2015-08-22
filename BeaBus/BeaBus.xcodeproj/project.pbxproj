@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A56CBB21B88ED4D0087C3C5 /* BusDriverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */; };
 		9657354C1B88798300B2EAAD /* BusNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354B1B88798300B2EAAD /* BusNumberViewController.m */; };
 		9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9657354E1B8879B500B2EAAD /* BusLineViewController.m */; };
 		965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965735521B8879DE00B2EAAD /* RankingViewController.m */; };
 		B00362A51B888854001745FD /* 01_search_img.png in Resources */ = {isa = PBXBuildFile; fileRef = B00362A41B888854001745FD /* 01_search_img.png */; };
 		B06A05541B88ABBC00BDE142 /* ico_like.png in Resources */ = {isa = PBXBuildFile; fileRef = B06A05521B88ABBC00BDE142 /* ico_like.png */; };
 		B06A05551B88ABBC00BDE142 /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = B06A05531B88ABBC00BDE142 /* rate.png */; };
+		B08626701B88EDE000D4F678 /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B086266F1B88EDE000D4F678 /* btn_back.png */; };
 		B0A2D3F51B8870FF003195F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F41B8870FF003195F7 /* main.m */; };
 		B0A2D3F81B8870FF003195F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F71B8870FF003195F7 /* AppDelegate.m */; };
 		B0A2D3FB1B8870FF003195F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3FA1B8870FF003195F7 /* ViewController.m */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A56CBB01B88ED4D0087C3C5 /* BusDriverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDriverViewController.h; sourceTree = "<group>"; };
+		5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDriverViewController.m; sourceTree = "<group>"; };
 		9657354A1B88798300B2EAAD /* BusNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusNumberViewController.h; sourceTree = "<group>"; };
 		9657354B1B88798300B2EAAD /* BusNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusNumberViewController.m; sourceTree = "<group>"; };
 		9657354D1B8879B500B2EAAD /* BusLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineViewController.h; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 		B00362A41B888854001745FD /* 01_search_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01_search_img.png; path = Resources/01_search_img.png; sourceTree = "<group>"; };
 		B06A05521B88ABBC00BDE142 /* ico_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ico_like.png; path = Resources/ico_like.png; sourceTree = "<group>"; };
 		B06A05531B88ABBC00BDE142 /* rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rate.png; path = Resources/rate.png; sourceTree = "<group>"; };
+		B086266F1B88EDE000D4F678 /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_back.png; path = Resources/btn_back.png; sourceTree = "<group>"; };
 		B0A2D3EF1B8870FF003195F7 /* BeaBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A2D3F31B8870FF003195F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A2D3F41B8870FF003195F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 		965735461B88776B00B2EAAD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B086266F1B88EDE000D4F678 /* btn_back.png */,
 				B06A05521B88ABBC00BDE142 /* ico_like.png */,
 				B06A05531B88ABBC00BDE142 /* rate.png */,
 				B0C786BA1B88A70000D252D8 /* btn_ready_01.png */,
@@ -115,6 +121,8 @@
 				9657354E1B8879B500B2EAAD /* BusLineViewController.m */,
 				965735511B8879DE00B2EAAD /* RankingViewController.h */,
 				965735521B8879DE00B2EAAD /* RankingViewController.m */,
+				5A56CBB01B88ED4D0087C3C5 /* BusDriverViewController.h */,
+				5A56CBB11B88ED4D0087C3C5 /* BusDriverViewController.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 				B06A05541B88ABBC00BDE142 /* ico_like.png in Resources */,
 				B0C786C01B88A70000D252D8 /* btn_ready_03.png in Resources */,
 				B0A2D3FE1B887100003195F7 /* Main.storyboard in Resources */,
+				B08626701B88EDE000D4F678 /* btn_back.png in Resources */,
 				B0A2D41A1B8879CD003195F7 /* icon.png in Resources */,
 				B00362A51B888854001745FD /* 01_search_img.png in Resources */,
 				CE78DE441B88BCC700050F6D /* bus_driver.png in Resources */,
@@ -296,6 +305,7 @@
 				B0A2D3F51B8870FF003195F7 /* main.m in Sources */,
 				9657354F1B8879B500B2EAAD /* BusLineViewController.m in Sources */,
 				965735531B8879DE00B2EAAD /* RankingViewController.m in Sources */,
+				5A56CBB21B88ED4D0087C3C5 /* BusDriverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +386,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -413,6 +424,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -427,6 +439,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -439,6 +452,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
