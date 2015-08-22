@@ -48,7 +48,9 @@
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    self.licenseNumberButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0];
+    self.licenseNumberButton.selected = selected;
+    self.reserveBusButton.selected = selected;
+    self.licenseNumberButton.backgroundColor = (selected) ? [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0] : [UIColor clearColor];
 }
 
 @end
@@ -58,6 +60,9 @@
 
 @property (strong, nonatomic) NSMutableArray *busStopInfos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *reserveBusView;
+@property (weak, nonatomic) IBOutlet UILabel *reserveBusDriverNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reserveBusLicenseNumberLabel;
 
 @end
 
@@ -66,6 +71,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.reserveBusView.alpha = 0.0f;
+    self.reserveBusView.center = CGPointMake(self.reserveBusView.center.x ,CGRectGetMaxY(self.view.frame)+CGRectGetHeight(self.reserveBusView.frame)/2);
     
     self.busStopInfos = [NSMutableArray new];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"調度站錦繡站" driverName:@"林家豪" licenseNumber:@"356-FW" remainingTime:@"進站中"]];
@@ -153,10 +161,32 @@
 
 - (IBAction)reserveBusButtonAction:(id)sender {
     NSInteger index = ((UIButton *)sender).tag;
-    BusStopCell *cell = (BusStopCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
-    cell.selected = YES;
-    cell.licenseNumberButton.selected = YES;
-    cell.reserveBusButton.selected = YES;
+    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredVertically];
+    [self.collectionView setContentInset:UIEdgeInsetsMake(0, 0, CGRectGetHeight(self.reserveBusView.frame), 0)];
+    
+    BusStopInfo *info = self.busStopInfos[index];
+    self.reserveBusDriverNameLabel.text = info.driverName;
+    self.reserveBusLicenseNumberLabel.text = info.licenseNumber;
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.reserveBusView.alpha = 1.0;
+                         self.reserveBusView.center = CGPointMake(self.reserveBusView.center.x ,CGRectGetMaxY(self.view.frame)-CGRectGetHeight(self.reserveBusView.frame)/2);
+                     }];
+}
+
+- (IBAction)cancelButtonAction:(id)sender {
+    for (NSIndexPath *path in [self.collectionView indexPathsForSelectedItems]) {
+        [self.collectionView deselectItemAtIndexPath:path animated:NO];
+    }
+    
+    [self.collectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.reserveBusView.alpha = 0.0f;
+                         self.reserveBusView.center = CGPointMake(self.reserveBusView.center.x ,CGRectGetMaxY(self.view.frame)+CGRectGetHeight(self.reserveBusView.frame)/2);
+                     }];
 }
 
 #pragma mark - UICollectionView data source
@@ -190,6 +220,12 @@
     }
     else {
         cell.remainingTimeLabel.backgroundColor = [UIColor colorWithRed:153.0/255.0 green:102.0/255.0 blue:0/255.0 alpha:1];
+    }
+    
+    if ([[collectionView indexPathsForSelectedItems] containsObject:indexPath]) {
+        cell.selected = YES;
+    } else {
+        cell.selected = NO;
     }
     
     return cell;
