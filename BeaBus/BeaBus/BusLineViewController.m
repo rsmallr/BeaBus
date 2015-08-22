@@ -87,7 +87,7 @@
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"薏仁坑" driverName:nil licenseNumber:nil remainingTime:@"14分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"車子路" driverName:nil licenseNumber:nil remainingTime:@"14分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"台北菸廠" driverName:nil licenseNumber:nil remainingTime:@"16分"]];
-    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"浪漫貴族" driverName:nil licenseNumber:@"225-FU" remainingTime:@"進站中"]];
+    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"浪漫貴族" driverName:@"吳江鳥" licenseNumber:@"225-FU" remainingTime:@"進站中"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"公崙新村" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"安康派出所" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"光華新村" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
@@ -116,11 +116,11 @@
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"臺大綜合體育館" driverName:nil licenseNumber:nil remainingTime:@"32分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"龍安國小(公務人力發展中心)" driverName:nil licenseNumber:nil remainingTime:@"34分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"金華新生路口" driverName:nil licenseNumber:nil remainingTime:@"35分"]];
-    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"信義新生路口" driverName:nil licenseNumber:@"357-FW" remainingTime:@"37分"]];
+    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"信義新生路口" driverName:@"吳大德" licenseNumber:@"357-FW" remainingTime:@"37分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"仁愛新生路口" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"捷運忠孝新生站" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"光華商場" driverName:nil licenseNumber:nil remainingTime:@"3分"]];
-    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"長安松江路口" driverName:nil licenseNumber:@"672-FU" remainingTime:@"5分"]];
+    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"長安松江路口" driverName:@"葉佩雯" licenseNumber:@"672-FU" remainingTime:@"5分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"捷運松江南京站" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"長春松江路口" driverName:nil licenseNumber:nil remainingTime:@"將到站"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"捷運行天宮站" driverName:nil licenseNumber:nil remainingTime:@"4分"]];
@@ -129,7 +129,7 @@
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"臺北魚市" driverName:nil licenseNumber:nil remainingTime:@"9分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"第二果菜市場" driverName:nil licenseNumber:nil remainingTime:@"11分"]];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"下埤里" driverName:nil licenseNumber:nil remainingTime:@"12分"]];
-    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"復興北村" driverName:nil licenseNumber:@"675-FU" remainingTime:@"進站中"]];
+    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"復興北村" driverName:@"李大仁" licenseNumber:@"675-FU" remainingTime:@"進站中"]];
 }
 
 - (void)didReceiveMemoryWarning {
