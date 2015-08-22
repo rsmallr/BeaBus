@@ -38,9 +38,14 @@
 - (void)showLikeViewIn:(CGFloat)second
 {
     self.likeImageView.center = self.view.center;
+    self.likeImageView.alpha = 0;
     [self.view addSubview:self.likeImageView];
-    [NSTimer scheduledTimerWithTimeInterval:second target:self selector:@selector(timeOut:) userInfo:nil repeats:NO];
-    
+    [UIView animateWithDuration:0.2 animations:^{
+        self.likeImageView.alpha = 1;
+    } completion:^(BOOL finished) {
+        self.likeImageView.alpha = 1;
+        [NSTimer scheduledTimerWithTimeInterval:second target:self selector:@selector(timeOut:) userInfo:nil repeats:NO];
+    }];
 }
 
 - (void)timeOut:(NSTimer *)timer
