@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965735481B88778200B2EAAD /* launcher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 965735471B88778200B2EAAD /* launcher.jpg */; };
 		B0A2D3F51B8870FF003195F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F41B8870FF003195F7 /* main.m */; };
 		B0A2D3F81B8870FF003195F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3F71B8870FF003195F7 /* AppDelegate.m */; };
 		B0A2D3FB1B8870FF003195F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A2D3FA1B8870FF003195F7 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		965735471B88778200B2EAAD /* launcher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = launcher.jpg; path = Resources/launcher.jpg; sourceTree = "<group>"; };
 		B0A2D3EF1B8870FF003195F7 /* BeaBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A2D3F31B8870FF003195F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A2D3F41B8870FF003195F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		965735461B88776B00B2EAAD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				965735471B88778200B2EAAD /* launcher.jpg */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		B0A2D3E61B8870FF003195F7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		B0A2D3F11B8870FF003195F7 /* BeaBus */ = {
 			isa = PBXGroup;
 			children = (
+				965735461B88776B00B2EAAD /* Resource */,
 				B0A2D3F61B8870FF003195F7 /* AppDelegate.h */,
 				B0A2D3F71B8870FF003195F7 /* AppDelegate.m */,
 				B0A2D3F91B8870FF003195F7 /* ViewController.h */,
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A2D3FE1B887100003195F7 /* Main.storyboard in Resources */,
+				965735481B88778200B2EAAD /* launcher.jpg in Resources */,
 				B0A2D4031B887100003195F7 /* LaunchScreen.xib in Resources */,
 				B0A2D4001B887100003195F7 /* Images.xcassets in Resources */,
 			);
