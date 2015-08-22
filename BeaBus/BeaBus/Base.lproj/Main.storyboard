@@ -66,7 +66,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.62745098039215685" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <searchBar contentMode="redraw" id="GS7-IJ-QdM">
+                            <searchBar userInteractionEnabled="NO" contentMode="redraw" id="GS7-IJ-QdM">
                                 <rect key="frame" x="0.0" y="50" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
