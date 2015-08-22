@@ -43,7 +43,7 @@
 {
     self.numberData = @[@"紅",@"藍",@"1",@"2",@"3",
                         @"綠",@"棕",@"4",@"5",@"6",
-                        @"菊",@"小",@"7",@"8",@"9",
+                        @"菊",@"小",@"7",@"8",@"9",        // 不知道會不會有人發現 這裏是菊花的菊......
                         @"更多",@"F",@"重設",@"DEL",@"0"];
 }
 
@@ -58,10 +58,40 @@
     [self performSegueWithIdentifier:@"goToBusLineView" sender:self];
 }
 
+- (void)goBack
+{
+    [self showLauncherViewIn:0.8];
+}
+
+- (void)showLauncherViewIn:(CGFloat)second
+{
+    UIView *view = [[NSBundle mainBundle] loadNibNamed:@"LaunchScreen" owner:self options:nil][0];
+    [self.view addSubview:view];
+    [NSTimer scheduledTimerWithTimeInterval:second target:self selector:@selector(timeOut:) userInfo:view repeats:NO];
+    
+}
+
+- (void)timeOut:(NSTimer *)timer
+{
+    UIView *view = timer.userInfo;
+    [UIView animateWithDuration:0.2 animations:^{
+        view.alpha = 0;
+    } completion:^(BOOL finished) {
+        [view removeFromSuperview];
+        view.alpha = 1;
+    }];
+}
+
 - (IBAction)onClickDoneButton:(id)sender
 {
     [self goToBusLineView];
 }
+
+- (IBAction)onClickBackButton:(id)sender
+{
+    [self goBack];
+}
+
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
