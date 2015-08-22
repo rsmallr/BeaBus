@@ -7,8 +7,10 @@
 //
 
 #import "BusNumberViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface BusNumberViewController ()
+@interface BusNumberViewController () <UISearchControllerDelegate>
+
 
 @end
 
@@ -21,9 +23,19 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+
     // Dispose of any resources that can be recreated.
 }
 
+- (void)goToBusLineView
+{
+    [self performSegueWithIdentifier:@"goToBusLineView" sender:self];
+}
+
+- (IBAction)onClickDoneButton:(id)sender
+{
+    [self goToBusLineView];
+}
 /*
 #pragma mark - Navigation
 
