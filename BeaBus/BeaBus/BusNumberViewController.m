@@ -84,7 +84,9 @@
 
 - (IBAction)onClickDoneButton:(id)sender
 {
-    [self goToBusLineView];
+    if (self.searchBar.text.length==3) {
+        [self goToBusLineView];
+    }
 }
 
 - (IBAction)onClickBackButton:(id)sender
@@ -131,7 +133,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.numberData.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
