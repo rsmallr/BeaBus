@@ -36,6 +36,11 @@
 {
     [self goToBusLineView];
 }
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 /*
 #pragma mark - Navigation
 
