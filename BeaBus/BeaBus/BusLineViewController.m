@@ -176,11 +176,13 @@
     BusStopCell *cell = (BusStopCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BusStopCell" forIndexPath:indexPath];
     
     BusStopInfo *info = self.busStopInfos[indexPath.row];
-    cell.licenseNumberButton.hidden = !(info.licenseNumber && info.licenseNumber.length > 0);
+    cell.licenseNumberButton.hidden  = cell.reserveBusButton.hidden = !(info.licenseNumber && info.licenseNumber.length > 0);
     cell.licenseNumberButton.layer.borderColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0].CGColor;
     [cell.licenseNumberButton setTitle:info.licenseNumber forState:UIControlStateNormal];
     cell.busStopNameLabel.text = info.busStopName;
     cell.remainingTimeLabel.text = info.remainingTime;
+    cell.reserveBusButton.tag = indexPath.item;
+    
     return cell;
 }
 
