@@ -36,6 +36,11 @@
 
 @interface BusStopCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *remainingTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *busStopNameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *licenseNumberButton
+;
+
 @end
 
 @implementation BusStopCell
@@ -57,6 +62,7 @@
     
     self.busStopInfos = [NSMutableArray new];
     [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"調度站錦繡站" driverName:@"林家豪" licenseNumber:@"356-FM" remainingTime:@"3分"]];
+    [self.busStopInfos addObject:[[BusStopInfo alloc] initWithBusStopName:@"調度站錦繡站" driverName:@"林家豪" licenseNumber:nil remainingTime:@"3分"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +78,10 @@
 
 - (IBAction)nextButtonAction:(id)sender {
     [self performSegueWithIdentifier:@"goToRankingView" sender:self];
+}
+
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UICollectionView data source
@@ -90,7 +100,21 @@
 {
     BusStopCell *cell = (BusStopCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BusStopCell" forIndexPath:indexPath];
     
+    BusStopInfo *info = (indexPath.item%2) ? self.busStopInfos[0] : self.busStopInfos[1];
+    cell.licenseNumberButton.hidden = !(info.licenseNumber && info.licenseNumber.length > 0);
+    cell.licenseNumberButton.layer.borderColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:0.0f/255.0f alpha:1.0].CGColor;
+    
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    BusStopInfo *info = (indexPath.item%2) ? self.busStopInfos[0] : self.busStopInfos[1];
+    if (info.licenseNumber && info.licenseNumber.length > 0) {
+        return CGSizeMake(320, 80);
+    } else {
+        return CGSizeMake(320, 40);
+    }
 }
 
 /*
