@@ -168,7 +168,7 @@
                                             <action selector="onClickBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i16-Or-HgE"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="643" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8yp-JU-HhM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="225-FU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8yp-JU-HhM">
                                         <rect key="frame" x="60" y="0.0" width="200" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
@@ -176,9 +176,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QD3-3e-UIz">
-                                        <rect key="frame" x="268" y="10" width="46" height="30"/>
+                                        <rect key="frame" x="277" y="7" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
+                                        <state key="normal" backgroundImage="ic_autorenew_white_2x.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -577,6 +577,7 @@
         <image name="btn_ready_02.png" width="292" height="81"/>
         <image name="btn_ready_03.png" width="292" height="81"/>
         <image name="bus_driver.png" width="75" height="77"/>
+        <image name="ic_autorenew_white_2x.png" width="48" height="48"/>
         <image name="ico_like.png" width="500" height="500"/>
         <image name="rate.png" width="640" height="1136"/>
     </resources>
