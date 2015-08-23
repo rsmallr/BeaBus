@@ -10,6 +10,9 @@
 
 @interface BusDriverViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *waitingPeopleButton;
+@property (nonatomic) NSInteger waitingPeople;
+
 @end
 
 @implementation BusDriverViewController
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self updateWaitingStatus];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +31,27 @@
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+- (IBAction)bakcButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)refreshButtonAction:(id)sender {
+    self.waitingPeople += 1;
+    
+    [self updateWaitingStatus];
+}
+
+- (void)updateWaitingStatus
+{
+    if (self.waitingPeople > 0) {
+        self.waitingPeopleButton.backgroundColor = [UIColor colorWithRed:255.0f/255.f green:102.0f/255.f blue:102.0f/255.f alpha:1.0f];
+    } else {
+        self.waitingPeopleButton.backgroundColor = [UIColor colorWithRed:51.0f/255.f green:153.0f/255.f blue:51.0f/255.f alpha:1.0f];
+    }
+    
+    [self.waitingPeopleButton setTitle:[NSString stringWithFormat:@"候車人數：%ld", (long)self.waitingPeople] forState:UIControlStateNormal];
 }
 
 /*
